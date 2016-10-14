@@ -5,9 +5,7 @@ window.onload=function()
   $("#"+storedValue).prop('checked', true);    
 }
 
-
 function tmp(e){
-
  if (!e)
         e = window.event;
     var _this = e.srcElement || e.target;
@@ -15,14 +13,17 @@ function tmp(e){
     localStorage.setItem(question, _this.id);
 }
 
-// $('napis').addEventListener('keydown',function(e){
-//     if(e.keyCode==13) 
-//     {
-            
-//       this.blur();
-//       e.preventDefault()
-//       e.stopPropagation();
-//     }
-//   }
-//   ,true);
+function back() {
+    history.back();
+}
+
+$('#name').keydown(function (e) {
+    if(e.keyCode==13)
+    {
+      this.blur();
+      e.preventDefault();
+      e.stopPropagation();
+    }
+});
+
 
