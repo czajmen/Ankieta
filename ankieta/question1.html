@@ -18,7 +18,7 @@ var question = "question1";
 	
 	<h2 class="question">Jaki jest twoje ulubione zwierze:</h2>
 
-        <form method="post" action="#" onsubmit="#">
+        <form method="post" action="../Api/saveToDb.php" id="ajax">
           <div class="answers">
              <ul>
                  <div class="col1">
@@ -66,7 +66,8 @@ var question = "question1";
                </div>
                <div class=" navbuttons">
                  <a class="btn btn-primary btn-lg " role="button" onclick="back()">Wróć</a>
-                 <a class="btn btn-primary btn-lg " href="question2.html" role="button">Dalej</a>
+                 <!--<a class="btn btn-primary btn-lg " href="question2.html"  type="submit" role="button">Dalej</a>-->
+                   <input type="submit"  value="send" >
                </div>
             </ul>
           </div>
