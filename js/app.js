@@ -19,6 +19,7 @@ function tmp(e){
         e = window.event;
     var _this = e.srcElement || e.target;
 
+<<<<<<< Updated upstream
     if(question !== "question3")
     {
         localStorage.setItem(question, _this.id );
@@ -27,6 +28,10 @@ function tmp(e){
     else {
 
     }
+=======
+    localStorage.setItem(question, _this.id);
+	localStorage.setItem(question, _this.value);
+>>>>>>> Stashed changes
 }
 
 
