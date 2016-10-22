@@ -56,6 +56,11 @@ ul li input[type=radio]{
   visibility: hidden;
 }
 
+ul li input[type=checkbox]{
+  position: absolute;
+  visibility: hidden;
+}
+
 ul li label{
   display: block;
   position: relative;
@@ -115,6 +120,18 @@ input[type=radio]:checked ~ .check::before{
 }
 
 input[type=radio]:checked ~ label{
+  color: #0DFF92;
+}
+
+input[type=checkbox]:checked ~ .check {
+  border: 5px solid #0DFF92;
+}
+
+input[type=checkbox]:checked ~ .check::before{
+  background: #0DFF92;
+}
+
+input[type=checkbox]:checked ~ label{
   color: #0DFF92;
 }
 
@@ -188,4 +205,14 @@ div .col1{
   text-align: center;
 }
 
+/*.checked{
+ border: 1px solid red;
+ background-color: white;
+ opacity: 0.01;
+}*/
 
+
+.checked{
+
+  background-color: rgba(100,100,100,0.5);
+}

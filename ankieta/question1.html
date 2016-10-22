@@ -8,6 +8,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
 var question = "question1";
+var value = "value1";
 </script>
 <script type="text/javascript" src="../js/app.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,13 +19,14 @@ var question = "question1";
 	
 	<h2 class="question">Jaki jest twoje ulubione zwierze:</h2>
 
-        <form method="post" action="../Api/saveToDb.php" id="ajax">
+        <form method="post" action="#" id="ajax">
           <div class="answers">
              <ul>
                  <div class="col1">
                       <li>
-                        <input type="radio" id="k-option" name="selector" value="Kot" onclick="tmp(event)">
+                        
                         <label for="k-option">Kot</label>
+                        <input type="radio" id="k-option" name="selector" value="Kot" onclick="tmp(event)">
 
                         <div class="check"></div>
                       </li>

@@ -2,7 +2,16 @@
 window.onload=function()
 {
   var storedValue = localStorage.getItem(question);
-  $("#"+storedValue).prop('checked', true);    
+
+    if(question == "question3")
+    {
+
+    }
+    else
+    {
+        $("#"+storedValue).prop('checked', true).toggleClass("checked");
+    }
+
 }
 
 function tmp(e){
@@ -10,8 +19,16 @@ function tmp(e){
         e = window.event;
     var _this = e.srcElement || e.target;
 
-    localStorage.setItem(question, _this.id);
+    if(question !== "question3")
+    {
+        localStorage.setItem(question, _this.id );
+        localStorage.setItem(value, _this.value);
+    }
+    else {
+
+    }
 }
+
 
 function back() {
     history.back();
@@ -26,9 +43,12 @@ $('#name').keydown(function (e) {
     }
 });
 
+$('.inp').on('input',function(e){
+    //text to localstorage
+});
+
 
 $('#ajax').submit(function() {
-
 
     var that = $(this),
         url = that.attr('action'),
@@ -40,8 +60,8 @@ $('#ajax').submit(function() {
         var that = $(this),
             name=that.attr('name'),
             value=that.val();
-
         data[name]= value;
+        data["answers"] = JSON.stringify(localStorage);
     });
 
     $.ajax({
@@ -50,6 +70,9 @@ $('#ajax').submit(function() {
         data: data,
         success: function(response){
             console.log(response);
+        },
+        error: function () {
+            console.log("Error");
         }
     });
 

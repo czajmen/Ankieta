@@ -5,9 +5,10 @@
  <link rel="stylesheet" href="../style/btn.css">
 <meta charset="utf-8">
 <title>Ankieta</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+var question = "summary";
+</script>
 
-<script type="text/javascript" src="../js/app.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
@@ -17,23 +18,26 @@
 	<div class="container" style="text-align: center;">
 
     <div class="welcome">
-  
-        <h2 id="surveystart" style="font-size: 16px;">Imie:</h2><input  type="text" name="name" id="name" />
-		<h2 id="surveystart" style="font-size: 16px;">Nazwisko</h2> <input  type="text" name="surname" id="surname" />
-		<h2 id="surveystart" style="font-size: 16px;">E-mail</h2> <input  type="mail" name="mail" id="mail" />
-		
-		<div class=" navbuttons">
-                 <a class="btn btn-primary btn-lg " role="button" onclick="back()">Wróć</a>
-                 <a class="btn btn-primary btn-lg "  type="submit" role="button">Wyslij</a>
-                   <!--<input type="submit"  value="send" >-->
-        </div>
-		
-    </div>
 
+     <form action="../Api/SaveToDb.php" method="post" id="ajax">
+
+        <h2 id="surveystart" style="font-size: 16px;">Imie:</h2><input  type="text" name="name" id="name" class="inp" />
+        <h2 id="surveystart" style="font-size: 16px;">Nazwisko</h2> <input  type="text" name="surname" id="surname" class="inp" />
+        <h2 id="surveystart" style="font-size: 16px;">E-mail</h2> <input  type="mail" name="mail" id="mail" class="inp" />
+
+       <div class=" navbuttons">
+                 <a class="btn btn-primary btn-lg " role="button" onclick="back()">Wróć</a>
+                 <input class="btn btn-primary btn-lg"  type="submit" value="send">
+        </div>
+    </form>
+    </div>
   </div>
-	
 
 
 </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
+
 </body>
 </html>
