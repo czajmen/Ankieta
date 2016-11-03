@@ -21,9 +21,9 @@ var question = "summary";
 
      <form action="../Api/SaveToDb.php" method="post" id="ajax">
 
-        <h2 id="surveystart" style="font-size: 16px;">Imie:</h2><input  type="text" name="name" id="name" class="inp" />
-        <h2 id="surveystart" style="font-size: 16px;">Nazwisko</h2> <input  type="text" name="surname" id="surname" class="inp" />
-        <h2 id="surveystart" style="font-size: 16px;">E-mail</h2> <input  type="mail" name="mail" id="mail" class="inp" />
+        <h2 id="surveystart" style="font-size: 16px;">Imie:</h2><input  type="text" name="name" id="name" class="inp" required />
+        <h2 id="surveystart" style="font-size: 16px;">Nazwisko</h2> <input  type="text" name="surname" id="surname" class="inp" required/>
+        <h2 id="surveystart" style="font-size: 16px;">E-mail</h2> <input  type="mail" name="mail" id="mail" class="inp" required/>
 
        <div class=" navbuttons">
                  <a class="btn btn-primary btn-lg " role="button" onclick="back()">Wróć</a>

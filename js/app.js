@@ -3,13 +3,26 @@ window.onload=function()
 {
   var storedValue = localStorage.getItem(question);
 
+
+
     if(question == "question3")
     {
+        var quest3 = JSON.parse(localStorage.getItem("guest3"))
+        var i=0;
 
+        quest3.forEach(function (entry) {
+            if(entry==1)
+            {
+                $("#"+i).prop('checked', true);
+                $('#'+i).parent().toggleClass("checked")
+            }
+                    i++;
+        })
     }
     else
     {
         $("#"+storedValue).prop('checked', true).toggleClass("checked");
+        $('#'+storedValue).parent().toggleClass("checked")
     }
 
 }
@@ -17,21 +30,32 @@ window.onload=function()
 function tmp(e){
  if (!e)
         e = window.event;
+    console.log(e);
     var _this = e.srcElement || e.target;
 
-<<<<<<< Updated upstream
+
+    $('#'+_this.id).parent().toggleClass("checked")
     if(question !== "question3")
     {
+        var storedValue = localStorage.getItem(question);
+        $('#'+storedValue).parent().toggleClass("checked")
+
+
+
         localStorage.setItem(question, _this.id );
         localStorage.setItem(value, _this.value);
     }
     else {
 
+        quest3 = JSON.parse(localStorage.getItem("guest3"));
+
+		if(guest3[_this.id] == "1"){
+		guest3[_this.id] = "0";}
+		else{
+		guest3[_this.id] = "1";}
+		localStorage.setItem("guest3",JSON.stringify(guest3))
     }
-=======
-    localStorage.setItem(question, _this.id);
-	localStorage.setItem(question, _this.value);
->>>>>>> Stashed changes
+
 }
 
 

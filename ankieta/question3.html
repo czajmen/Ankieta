@@ -9,6 +9,10 @@
 <script type="text/javascript">
 var question = "question3";
 var value = "value3";
+   var guest3 = JSON.parse(localStorage.getItem("guest3"));
+    if(guest3==null){
+        guest3 = ["0","0","0","0","0","0"];
+    }
 </script>
 <script type="text/javascript" src="../js/app.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,22 +28,22 @@ var value = "value3";
              <ul>
                  <div class="col1">
                       <li>
-                        <input type="checkbox" id="k-option" name="selector" value="kawiarnia" onclick="tmp(event)">
-                        <label for="k-option">Kawiarnia</label>
+                        <input type="checkbox" id="0" name="selector" value="kawiarnia" onclick="tmp(event)">
+                        <label for="0">Kawiarnia</label>
 
                         <div class="check"></div>
                       </li>
 
                       <li>
-                        <input type="checkbox" id="p-option" name="selector" value="swoj_kat" onclick="tmp(event)">
-                        <label for="p-option">Swoj kat</label>
+                        <input type="checkbox" id="1" name="selector" value="swoj_kat" onclick="tmp(event)">
+                        <label for="1">Swoj kat</label>
 
                         <div class="check"><div class="inside"></div></div>
                       </li>
 
                       <li>
-                        <input type="checkbox" id="r-option" name="selector" value="dyskoteka" onclick="tmp(event)">
-                        <label for="r-option">Dyskoteka</label>
+                        <input type="checkbox" id="2" name="selector" value="dyskoteka" onclick="tmp(event)">
+                        <label for="2">Dyskoteka</label>
 
                         <div class="check"><div class="inside"></div></div>
                       </li>
@@ -47,20 +51,20 @@ var value = "value3";
 
                <div class="col2">
                     <li>
-                      <input type="checkbox" id="g-option" name="selector" value="w_parku" onclick="tmp(event)">
-                      <label for="g-option">W Parku</label>
+                      <input type="checkbox" id="3" name="selector" value="w_parku" onclick="tmp(event)">
+                      <label for="3">W Parku</label>
 
                       <div class="check"><div class="inside"></div></div>
                     </li>
                      <li>
-                      <input type="checkbox" id="m-option" name="selector" value="w_pracy" onclick="tmp(event)">
-                      <label for="m-option">W Pracy</label>
+                      <input type="checkbox" id="4" name="selector" value="w_pracy" onclick="tmp(event)">
+                      <label for="4">W Pracy</label>
 
                       <div class="check"><div class="inside"></div></div>
                     </li>
                     <li>
-                      <input type="checkbox" id="s-option" name="selector" value="w_kinie" onclick="tmp(event)">
-                      <label for="s-option">W kinie</label>
+                      <input type="checkbox" id="5" name="selector" value="w_kinie" onclick="tmp(event)">
+                      <label for="5">W kinie</label>
 
                       <div class="check"><div class="inside"></div></div>
                     </li>

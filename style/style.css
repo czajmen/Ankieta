@@ -205,14 +205,6 @@ div .col1{
   text-align: center;
 }
 
-/*.checked{
- border: 1px solid red;
- background-color: white;
- opacity: 0.01;
-}*/
-
-
 .checked{
-
-  background-color: rgba(100,100,100,0.5);
+  background-color: rgba(100,100,100,1);
 }
