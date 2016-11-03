@@ -98,13 +98,14 @@ $('#ajax').submit(function() {
         type: method,
         data: data,
         success: function(response){
+
             console.log(response);
         },
         error: function () {
             console.log("Error");
         }
     });
-
+    window.location.href = "../index.html";
     return false;
 
 });
