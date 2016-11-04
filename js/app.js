@@ -34,7 +34,9 @@ function tmp(e){
     var _this = e.srcElement || e.target;
 
 
+
     $('#'+_this.id).parent().toggleClass("checked")
+
     if(question !== "question3")
     {
         var storedValue = localStorage.getItem(question);
@@ -46,6 +48,7 @@ function tmp(e){
         localStorage.setItem(value, _this.value);
     }
     else {
+
 
         quest3 = JSON.parse(localStorage.getItem("guest3"));
 
@@ -105,7 +108,7 @@ $('#ajax').submit(function() {
             console.log("Error");
         }
     });
-    window.location.href = "../index.html";
+    window.location.href = "description.html";
     return false;
 
 });

@@ -6,12 +6,12 @@
 <meta charset="utf-8">
 <title>Ankieta</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="../js/wynik.js"></script>
-<script type="text/javascript" src="../js/app.js"></script>
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
-<body>
+<body onload="myFunction()">
    
 	
 	<div class="container" style="text-align: center;">
@@ -20,20 +20,30 @@
   
         <h2 id="surveystart"  style="font-size: 16px;">Wynik:</h2>
 		
-		<div id="div">
-         <script type="text/javascript">
-             insert();
-         </script>
-     </div>
+		<img id="myImg" src="" width="300" height="200">
+         <p id="tex"></p>
+		
 		
 		
 		
     </div>
 
   </div>
-	
+<script>
+var img = ["../image/01.jpeg" ,"../image/02.jpeg","../image/03.jpg","../image/04.jpeg","../image/05.jpeg","../image/06.jpeg"];  
+var tx = [
+"<h2><b>Nowoczesna Artystka</b><br>Ciągle poszukujesz nowego odniesienia do swojej osobowosci ale nie martw sie natchnienie czeka za rogiem</h2>",
+"<h2><b>Codzienna Optymistka</b><br>Każde wyzwanie traktujesz z lekkościa i nie obawiasz sie ze zawiedziesz ,ale pamientaj o przyjaciołach których zawsze masz obok siebie</h2>",
+ "<h2><b>Kochająca Matka</b><br>Rodzina jest dla ciebie najwazniejsza .Kochający mąż i dziecko to źródło twojej codziennej energi</h2>",
+ "<h2><b>Wieczne dziecko</b><br>Codziennoś to dla ciebie kolejna przygoda .Za kazdym razem odkrywasz nowy swiat i cieżko ci zatrzymać w jedym miejscu</h2>",
+ "<h2><b>Nieszcześliwy Rodzic</b><br>Zdarzyła ci sie straszna tragedia ,ale nie trać wiary nie wiesz kiedy życie zmieni sie na lepsze</h2>",
+ "<h2><b>Zmiennie Morze</b><br>Nigdy nie wiadomo czego sie od ciebie spodziewac .Raz jestes spokojna i beztroska ,a innym razem nerwowa i niepewna .Staraj sie nie przejmowac bo to dla ciebie najważniejsze</h2>"]
 
-
-</div>
+ function  myFunction(){	
+var i = Math.floor((Math.random() * 6 ) + 1);
+document.getElementById("myImg").src = img[i-1];
+document.getElementById("tex").innerHTML = tx[i-1];
+}
+</script>
 </body>
 </html>
