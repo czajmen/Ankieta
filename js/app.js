@@ -75,6 +75,26 @@ $('#name').keydown(function (e) {
     }
 });
 
+$('#surname').keydown(function (e) {
+    if(e.keyCode==13)
+    {
+      this.blur();
+      e.preventDefault();
+      e.stopPropagation();
+    }
+});
+
+$('#mail').keydown(function (e) {
+    if(e.keyCode==13)
+    {
+      this.blur();
+      e.preventDefault();
+      e.stopPropagation();
+    }
+});
+
+
+
 $('.inp').on('input',function(e){
     //text to localstorage
 });
@@ -108,7 +128,7 @@ $('#ajax').submit(function() {
             console.log("Error");
         }
     });
-    window.location.href = "description.html";
+     window.location.href = "description.html";
     return false;
 
 });
